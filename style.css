@@ -34,6 +34,7 @@
     --dark-blue-line: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
     --soft-blue: hsl(215, 51%, 70%);
+    --soft-blue-30-opaque: rgba(	139, 172, 218, .3);
     --cyan: hsl(178, 100%, 50%);
     --cyan-60-opaque: rgba(0, 255, 247, .6);
 }
@@ -43,12 +44,15 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 1.125rem;
+}
+
 body {
     display: grid;
     min-height: 100vh;
     justify-content: center;
     align-content: center;
-    font-size: 18px;
     background-color: var(--dark-blue-main-bg);
     font-family: 'Outfit', sans-serif;
 }
@@ -62,7 +66,7 @@ h2 {
 p {
     font-weight: 400;
     color: var(--soft-blue);
-    line-height: 1.6rem;
+    line-height: 1.5;
 }
 
 a {
@@ -80,10 +84,22 @@ strong {
     color: white;
 }
 
+/* Hiding class, making content visible only to screen readers but not visually */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+
 /* The card */
 .card {
-    max-width: 25rem;
-    padding: 1.75rem;
+    max-width: 22rem;
+    padding: 1.5rem;
     background-color: var(--dark-blue-card-bg);
     border-radius: 1.5rem;
     box-shadow: 1rem 1rem 1.5rem -0.5rem;
@@ -97,14 +113,6 @@ strong {
 .card__price-section>div:first-child p {
     color: var(--cyan);
     font-weight: 600;
-}
-
-hr {
-    border-top: 1px solid var(--soft-blue);
-    border-bottom: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-    opacity: 30%;
 }
 
 
@@ -139,7 +147,13 @@ hr {
     opacity: 100%;
 } 
 
-/* The avatar */
+/* The avatar section */
+.card__avatar-section {
+    border-top: 1px solid var(--soft-blue-30-opaque);
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
 .avatar {
     border: 1px solid white;
     border-radius: 50%;
