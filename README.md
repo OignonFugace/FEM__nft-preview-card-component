@@ -45,12 +45,14 @@ Any feedback on those or any other part of the challenge is welcome !
 Thank you all. 
 
 ### Edits after feedback
-- Adding `<h1 class="sr-only">` that is visually hidden. 
-- Adding `aria-hidden="true"` and `focusable="false"` on each svgs icon that are decorative only to make all assistive technologies such as screen reader ignore those svgs.  
-- Modifying the alternative text of the avatar to something more explicit and descriptive than `avatar`.
-- Removing `<hr>`, instead using `border-top` to the avatar's part. 
-- Using unitless line-height values instead of `rem` as advised here : [line-height - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values)
-- Placing the `font-size` property on `html` element rather than `body`, using `%` to ensure that the end user can decide of the font size he wants in his browser, but respecting the 18px required in `style-guide.md`.
+- Add `<h1 class="sr-only">` that is visually hide the title but make sure it is present for screen readers. 
+- Add `aria-hidden="true"` and `focusable="false"` on each svgs icon that are decorative only to make all assistive technologies such as screen readers ignore those svgs.  
+- Modify the alternative text of the avatar to something more explicit and descriptive than `avatar`.
+- Remove `<hr>`, instead using `border-top` to the avatar's part. 
+- Use unitless line-height values instead of `rem` as advised here : [line-height - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#prefer_unitless_numbers_for_line-height_values)
+- Placing the `font-size` property on `html` element rather than `body`, using `rem` (but really they are percentage of the root font given by the browser) to ensure that the end user can decide of the font size he wants in his browser, but respecting the 18px required in `style-guide.md`.
+- Swich from image overlay div in HTML to ::before pseudo-element in CSS. 
+
 
 ## Author
 

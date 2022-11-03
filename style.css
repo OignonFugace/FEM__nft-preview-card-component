@@ -129,23 +129,23 @@ strong {
     width: 100%;
 }
 
-.image__overlay {
-    background-color: var(--cyan-60-opaque);
+.card__image::before {
     position: absolute;
+    content: url("images/icon-view.svg");
     display: grid;
     justify-content: center;
     align-content: center;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    background-color: var(--cyan-60-opaque);
     opacity: 0%;
     transition: .2s;
 }
 
-.card__image:hover .image__overlay {
+.card__image:hover::before {
     opacity: 100%;
-} 
+}
+
 
 /* The avatar section */
 .card__avatar-section {
